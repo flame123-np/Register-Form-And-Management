@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face 
+        {
+            font-family: 'kanit';
+            src: url('./Kanit/Kanit-Regular.ttf');
+        }
+        body
+        {
+            font-family: 'kanit';
+        }
+        #regigister
+        {
+            font-size: 24px;
+            color: aqua;
+            font-weight: 800;
+            padding: 10px;
+            margin: 10px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        .header-form
+        {
+            font-weight: 800;
+        }
+        .gender {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .container
+        {
+            display: flex;
+        }
+        .item-left
+        {
+            background-color: blue;
+            flex: 1;
+        }
+        .item-right
+        {
+            background-color: red;
+            flex: 2;
+        }
+        .grid-container
+        {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        .item-1 , .item-3
+        {
+            background-color: aqua;
+        }
+        .item-2
+        {
+            background-color: wheat;
+        }
+        .item-4
+        {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item-left">Left</div>
+        <div class="item-right">Right</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-container">item 1</div>
+        <div class="grid-container">item 2</div>
+        <div class="grid-container">item 3</div>
+        <div class="grid-container">item 4</div>
+    </div>
+    <span class="header-form">ชื่อ</span>
+    <input class= " form" t4ype="text">
+    <span class="header-form">นาสกุล</span>
+    <input class= " form" type="text"> <br>
+    อายุ<input class = "form " type="Number" min="0" max="150">
+    <div class="gender">
+        เพศ
+        <div>
+            <input name="gender" type="radio">ชาย
+        </div>
+        <div>
+            <input name="gender" type="radio">หญิง
+        </div>
+        <div>
+            <input name="gender" type="radio">อื่นๆ
+        </div>
+    </div>
+    <div>
+        สิ่งที่สนใจ
+        <div>
+            <input name="interest" type="checkbox">เรียน
+        </div>
+        <div>
+            <input name="interest" type="checkbox">เล่นเกมส์
+        </div>
+        <div>
+            <input name="interest" type="checkbox">อ่านหนังสือ
+        </div>
+    </div>
+    <div>
+        อธิบายตัวเอง
+        
+</body>
+</html>
