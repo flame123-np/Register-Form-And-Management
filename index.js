@@ -1,30 +1,17 @@
-function submitData() {
-    let firstnameDOM = document.querySelector('input[name="firstname"]');
-    let lastnameDOM = document.querySelector('input[name="lastname"]');
-    let ageDOM = document.querySelector('input[type="number"]');
+// import http module เพื่อสร้าง server
+const http = require('http');
 
-    let genderDOM = document.querySelector('input[name="gender"]:checked');
-    let interestsDOM = document.querySelectorAll('input[name="interest"]:checked');
+const host = 'localhost'; // กำหนด host ที่ sever จะรอรับ request
+const port = 8000 // กำหนด post ที่จะใช้
 
-    let descriptionDOM = document.querySelector('textarea[name="description"]');
 
-    let interest = '';
-
-    for (let i = 0; i < interestsDOM.length; i++) {
-        interest += interestsDOM[i].value;
-        if (i < interestsDOM.length - 1) {
-            interest += ',';
-        }
-    }
-
-    let userData = {
-        firstname: firstnameDOM.value,
-        lastname: lastnameDOM.value,
-        age: ageDOM.value,
-        gender: genderDOM ? genderDOM.value : '',
-        description: descriptionDOM.value,
-        interest: interest
-    };
-
-    console.log('submitData', userData);
+// กำหนดค่าเริ่มต้นของ sever
+const requestListener = function (req, res) {
+  res.writeHead(200); // ส่ง status code 200 กลับไปให้ client
+  res.end('Hello, World!\n'); // ส่ง response กลับไปให้ client
 }
+
+const server = http.createServer(requestListener); // สร้าง server โดยใช้ http.createServer โดยส่ง requestListener ไปเป็น callback function
+   server.listen(port, host, () => { // กำหนด port และ host ที่ server จะ listen และใช้ callback function เพื่อทำงานเมื่อ server เริ่มทำงาน
+    console.log(`Server is running on http://${host}:${port}`); // แสดงข้อความเมื่อ server เริ่มทำงาน
+    })
