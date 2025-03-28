@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <div id="user-list"></div>
+
+    <script>
+        const BASE_URL = 'http://localhost:8000/users';
+
+        // ฟังก์ชันโหลดข้อมูลจาก API
+        async function loadUsers() {
+            try {
+                const response = await fetch(BASE_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const users = await response.json();
+                console.log('responseData:', users);
+                displayUsers(users);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        }
+
+        // ฟังก์ชันแสดงข้อมูลในหน้า HTML
+        function displayUsers(users) {
+            const userList = document.getElementById('user-list');
+            userList.innerHTML = ''; // เคลียร์ข้อมูลเก่าก่อนแสดงใหม่
+
+            users.forEach(user => {
+                const userDiv = document.createElement('div');
+                userDiv.textContent = `${user.id}: ${user.firstname} ${user.lastname}`;
+                userList.appendChild(userDiv);
+            });
+        }
+
+        // โหลดข้อมูลเมื่อหน้าเว็บถูกเปิด
+        document.addEventListener('DOMContentLoaded', loadUsers);
+    </script>
+</body>
+</html>
