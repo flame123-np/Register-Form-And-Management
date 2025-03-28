@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  background-image: url('user.png'); /* เปลี่ยนเป็นไฟล์ภาพที่คุณใช้ */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+th {
+  background: linear-gradient(to right, #ff5722, #f44336);
+  font-weight: bold;
+}
+
+button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  background: linear-gradient(to right, #ff5722, #f44336);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+/* ปุ่ม Edit */
+button.Edit:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+/* ปุ่ม Delete */
+button.delete:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+/* ปุ่ม Back */
+.back-button:hover {
+  background: linear-gradient(to right, #f44336, #ff5722);
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
+
+/* hover แถวของตาราง */
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+

@@ -1,0 +1,143 @@
+        /*ส่วนนี้คือ CSS */
+        /*ใช้สำหรับเเต่ง (id class)*/
+        @font-face {
+         font-family: 'Kanit';
+         src: url('./Kanit/Kanit-Regular.ttf');
+       }
+     body { //เปลี่ยนสีพื้นหลังหน้าเว็บ
+         font-family: 'Kanit';
+         background-image: url('view1.png');
+         background-size: cover;
+         background-position: center;
+         border-radius: 20px;
+         margin: 0;  
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 0px;
+         flex-direction: column;
+         min-height: 100vh;
+     }
+     .container {
+         font-family: 'Kanit';
+         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+         background-size: cover;
+         overflow: hidden;
+         color: white;
+         width: 100%;
+         max-width: 640px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 40px;
+         box-sizing: border-box;
+         border-radius: 10px;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+         
+     }
+     .header {
+         font-size: 30px;
+         text-align: center;
+         margin-bottom: 20px;
+         
+     }
+     .header-form {
+         width: 140px;
+         front-weight: normal;
+         margin-bottom: 10px;
+         padding-left: 10px;
+     }
+     // flex(gender)
+     .flex {
+         margin-bottom: 10px;
+     }
+     
+     .form-input {
+         margin-bottom: 10px;
+         padding-right: 40px;
+     }
+     input.form , textarea {
+         border: 1px solid #ccc;
+         background: rgba(255, 255, 255, 0.3);
+         color: white;
+         letter-spacing: 1px;
+         border: 0;
+         border-radius:5px;
+         width: 100%;
+         height: 35px;
+         padding-left: 10px;
+         max-width: 100%;
+     }
+     input.form:hover, textarea:hover {
+         background: rgba(255, 255, 255, 0.5);
+         cursor: pointer;
+     }
+     .center {
+         text-align: center;
+     }
+     .button {
+         font-family: 'Kanit';
+         font-size: 15px;
+         background: rgb(45, 126 , 231);
+         border-radius: 10px;
+         border: 0;
+         width: 50%;
+         height: 50px;
+         color: white;
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+         transition: 0.1s;
+     }
+     button:hover {
+         background: #22b14c;
+         cursor: pointer;
+         transition: 0.3s;
+     }
+     .message {
+         margin-buttom: 10px;
+         padding: 15px;
+         background-color: lightgray;
+         color: black;
+         display: none;
+     }
+     .message.success {
+         background-color: lightgreen;
+         display: block;
+         margin-bottom: 20px;
+     }
+     .message.danger {
+         background-color: lightcoral;
+         display: block;
+         margin-bottom: 20px;
+     }
+     .to-user {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        background: linear-gradient(to right, #ff5722, #f44336);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.2s ease;
+        z-index: 10;
+      }
+      
+      .to-user:hover {
+        background: linear-gradient(to right, #f44336, #ff5722);
+        transform: scale(1.05);
+      }
+           
+
+     @media screen and (max-width: 768px) {
+         .flex {
+             flex-direction: column;
+         }
+         .header {
+             font-size: 24px;
+         }
+         .button {
+             width: 100%;
+         }
+     }
