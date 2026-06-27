@@ -42,7 +42,8 @@
    ```bash
    docker-compose up -d
 4. เข้าใช้งานผ่านเบราว์เซอร์:
-   * หน้าเว็บสำหรับผู้ใช้งาน: http://localhost:XXXX (เปลี่ยน XXXX เป็น Port ที่ตั้งไว้ใน docker-compose)
+   * ระบบจัดการฐานข้อมูล (phpMyAdmin): เข้าไปที่ http://localhost:8831 (ใช้ Username: root / Password: root)
+   * ฐานข้อมูล MySQL: เชื่อมต่อผ่านพอร์ต 8830
 
 ---
 
